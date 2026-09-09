@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { AIAssistant } from './components/AIAssistant';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { SkillsPage } from './pages/SkillsPage';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <AIAssistant />
       <Footer />
     </Router>
   );
