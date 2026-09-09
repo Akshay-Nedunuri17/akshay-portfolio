@@ -1,16 +1,17 @@
 import React from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Navbar({ theme, toggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '/skills' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Experience', href: '/experience' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -30,14 +31,15 @@ export function Navbar({ theme, toggleTheme }) {
         paddingTop: '16px',
         paddingBottom: '16px',
       }}>
-        <a href="#" style={{
+        <Link to="/" style={{
           fontWeight: 700,
           fontSize: '20px',
           color: 'var(--text-primary)',
-          letterSpacing: '-0.5px'
+          letterSpacing: '-0.5px',
+          textDecoration: 'none'
         }}>
           Akshay<span style={{ color: 'var(--accent-primary)' }}>.</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
@@ -51,19 +53,20 @@ export function Navbar({ theme, toggleTheme }) {
           }} className="desktop-links">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   style={{
                     color: 'var(--text-secondary)',
                     fontWeight: 500,
                     fontSize: '14px',
                     transition: 'color 0.2s',
+                    textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => (e.target.style.color = 'var(--accent-primary)')}
                   onMouseLeave={(e) => (e.target.style.color = 'var(--text-secondary)')}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
