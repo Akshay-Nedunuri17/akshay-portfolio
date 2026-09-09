@@ -1,14 +1,14 @@
 export const profile = {
-  name: 'Akshay',
+  name: 'Akshay Nedunuri',
   title: 'Aspiring Full Stack Developer',
   tagline: 'Building modern web applications with React, Node.js, and MongoDB',
-  email: 'akshay@example.com',
-  phone: '+91 XXXXX XXXXX',
+  email: 'akshaynedunuri17@gmail.com',
+  phone: '+91 9966813331',
   location: 'India',
 
   // Social links
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourusername',
+  github: 'https://github.com/Akshay-Nedunuri17',
+  linkedin: 'https://www.linkedin.com/in/akshaynedunuri/',
   twitter: 'https://twitter.com/yourusername',
 
   // Resume
